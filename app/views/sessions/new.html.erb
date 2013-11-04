@@ -1,0 +1,17 @@
+<div class="container">
+<h2>Sign In to <%= image_tag("logo.png") %></h2>
+<div class="login_registration">
+	<div class="flash">
+		<% if flash[:message] %>
+		<p id="login_error"><%= flash[:message] %></p>
+		<% end %>
+	</div>
+<div class='form_fields'>
+ 	<%= simple_form_for @user, url: login_path do |form_field| %>
+		<%= form_field.input :email, label: 'Email' %>
+		<%= form_field.input :password, label: 'Password' %>
+		<%= form_field.button :submit, value: '', id: 'test' %>
+	<% end %>
+</div>
+</div>
+</div>

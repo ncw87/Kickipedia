@@ -1,0 +1,19 @@
+<div class='container'>
+<h2>Create a Post</h2>
+<div class="login_registration">
+	<div class="form_fields">
+	<%= simple_form_for @shoe, multipart: true do |f| %>
+		<p class='white'>Name</p>
+		<%= f.input :name, label: false, class: "white" %>
+		<p class='white'>Description</p>
+		<%= f.text_area :description, label:false, class: "white" %>
+		<p class='white'>Brand</p>
+		<%= f.input :brand, collection: ["Jordan", "LeBron", "KD", "Kobe", "Foam", "Nike", "Reebok", "Adidas", "Puma", "Asics"], label: false %>
+		<p class='white'>Release Date</p>
+		<%= f.input :release_date, label: false %>
+		<%= f.file_field :image %>
+		<%= f.button :submit, value: " ", id:"test" %>
+	<% end %>
+	</div>
+</div>
+</div>

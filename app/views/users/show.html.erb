@@ -1,0 +1,9 @@
+<div class="container">
+<h2><%= @user[:first_name] %>'s Shoe Closet</h2>
+
+<% @shoe_closet.each do |shoe| %>
+<%= link_to (image_tag shoe.image_url.to_s, width:180), shoe_path(shoe.id) %>
+<% end %>
+
+
+</div>

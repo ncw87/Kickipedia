@@ -1,0 +1,8 @@
+<div class="container">
+	<div id="archive">
+		<h2><%= image_tag("logo.png")%>Archive</h2>
+		<% @shoes.each do |shoe| %>
+		<%= link_to (image_tag shoe.image_url.to_s, width:180), shoe_path(shoe.id) %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,213 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+p{
+	color:black;
+}
+h2{
+	color:black;
+}
+h3{
+	color:black;
+}
+h4{
+	color:black;
+}
+.grey{
+	color:grey;
+}
+.white{
+	color:white;
+}
+.reset{
+	margin: 0px;
+	padding: 0px;
+}
+#user_nav_bar_list{
+	margin: 0%;
+	background:black;
+	height: auto;
+	width: 100%;
+	float:right;
+	.nav_button
+	{
+	color:lightblue;
+	font-weight: 100;
+	}
+	li
+	{
+	display: inline-block;
+	float: right;
+	border-right: 1px solid lightblue;
+	padding: 0px 10px;
+	}
+	li:nth-child(1)
+	{
+	border:none;
+	}
+	a
+	{
+	text-decoration: none;
+	}
+	a:hover
+	{
+	color:white;
+	}
+}
+
+#nav_bar{
+	/*background: blue;*/
+	/*display: block;*/
+	float:right;
+	width:auto;
+	/*height:90%;*/
+	li
+	{
+	border-right: 1px solid lightblue;
+	/*text-decoration: none;*/
+	display: inline-block;
+	padding: 0px 30px 0px 30px;
+	}
+	li:nth-child(4)
+	{
+	border:none;
+	}
+	a
+	{
+	text-decoration: none;
+	color:black;
+	}
+	a:hover
+	{
+	color:lightblue;
+	}
+}
+
+#sole_search_button{
+	background-image:url('nike_swoosh.gif');
+	background-size:100%;
+	margin-bottom:10px;
+	width: 50px;
+	height: 25px;
+}
+#test123{
+	overflow:hidden;
+}
+#test{
+	background-image:url('nike_swoosh.gif');
+	background-position: 0 0px;
+	background-size:100%;
+	width: 50px;
+	height: 25px;
+	/*padding:30px 60px;*/
+}
+
+.login_registration{
+	border-radius: 10px;
+	background: black;
+	float: left;
+	margin-left: 10%;
+	margin-top: 0%;
+	height:auto;
+	width: 260px;
+}
+#login_error{
+	color:blue;
+}
+.session_box{
+	margin-left: 50px;
+}
+.session_button{
+	color: black;
+}
+
+.form_fields{
+	padding-left: 15px;
+}
+
+
+#side_nav_bar{
+	/*color:blue;*/
+	background:black;
+	/*height: 100%;*/
+	width: 175px;
+	display: inline-block;
+	float: left;
+	margin:0%;
+	margin-bottom: -5000px;
+	padding-bottom: 5000px;
+	
+	#side_bar_content
+	{
+
+	}
+	ul
+	{
+	list-style-type: none;
+	height:100%;
+	}
+	a
+	{
+	text-decoration: none;
+	color:lightblue;
+	}
+	a:hover
+	{
+	color:white;
+	}
+	.nav_subheader
+	{
+	padding: 10px 0px 0px 0px;
+	font-size: 30px;
+	color:white;
+	}
+}
+.container{
+	/*margin:0%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	clear:right;
+}
+
+#news{
+	/*margin: 40%, 0%, 0%, 0%;*/
+	/*background: lightblue;*/
+	/*display: inline-block;*/
+	/*float: left;*/
+	clear:right;
+	/*position: relative;*/
+}
+#archive{
+	/*margin-left: 200px;*/
+	/*float:left;*/
+	/*display: inline-block;*/
+	/*background-color: blue;*/
+	/*width: auto;*/
+}
+
+.collection_button{
+	background-color:black;
+	color:lightblue;
+	border: 1px solid lightblue;
+	font-weight:900;
+	/*height:25px;*/
+	/*width:0px;*/
+	float:right;
+	/*display: inline-block;*/
+	/*position:absolute;*/
+}
+
+#shoe_title{
+	width:auto;
+	height:auto;
+	font-size:50px;
+	color:black;
+	/*background:blue;*/
+	display:inline-block;
+}

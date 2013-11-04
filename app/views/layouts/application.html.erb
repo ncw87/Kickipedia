@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main page</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="test123">
+<div id= "user_nav_bar">
+	<ul id = "user_nav_bar_list">
+		<% if signed_in? %>
+			<li><%= link_to 'Logout', logout_path, method: :delete, class: "nav_button" %></li>
+			<li><%= link_to 'Shoe Closet', user_path(current_user) , class: "nav_button" %></li>
+		<% end %>
+		<% if !signed_in? %>
+			<li><%= link_to 'Register', new_user_path, class: "nav_button" %></li>
+			<li><%= link_to 'Sign In', login_path , class: "nav_button" %></li>
+		<% end %>
+	</ul>
+</div>
+
+<div id= "nav_bar">
+	<ul>
+			<li><%= link_to 'Home', root_path, class: "nav_button" %></li>
+			<li><%= link_to 'The Archive', shoes_path , class: "nav_button" %></li>
+			<li><%= link_to 'About', about_path, class: "nav_button" %></li>
+			<li id ="sole_search"><%= form_tag(search_path, method: "get")  do %>
+				<%= text_field_tag :search, params[:search], placeholder: "Sole Search" %>
+				<%= submit_tag '', id: 'sole_search_button' %>
+				<% end %>
+			</li>
+	</ul>
+</div>
+
+<div id='side_nav_bar'>
+	<div class='side_bar_content'>
+		<ul class='reset'>
+			<li><%= link_to image_tag("logobox.png", alt: "home"), root_path %></li>
+			<li class="nav_subheader">Shoes</li>
+			<li><%= link_to 'Jordans', brand_path('Jordan') %></li>
+			<li><%= link_to 'LeBrons', brand_path('LeBron') %></li>
+			<li><%= link_to 'KDs', brand_path('KD') %></li>
+			<li><%= link_to 'Kobes', brand_path('Kobe') %></li>
+			<li><%= link_to 'Foams', brand_path('Foam') %></li>
+			<li><%= link_to 'Nikes', brand_path('Nike') %></li>
+			<li><%= link_to 'Reeboks', brand_path('Reebok') %></li>
+			<li><%= link_to 'Adidas', brand_path('Adidas') %></li>
+			<li><%= link_to 'Pumas', brand_path('Puma') %></li>
+			<li><%= link_to 'Asics', brand_path('Asics') %></li>
+			<li class="nav_subheader">Contribute</li>
+			<li><%= link_to 'Create a Shoe?', new_shoe_path %></li>
+		</ul>
+	</div>
+</div>
+<%= yield %>
+</div>
+</body>
+</html>

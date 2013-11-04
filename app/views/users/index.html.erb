@@ -1,0 +1,12 @@
+<div class = 'container'>
+<div id = 'header'>
+	<h2>Welcome to <%= image_tag("logo.png") %></h2>
+	<p>The free shoe encyclopedia</p>
+</div>
+	<div id="featured_article"> 
+	<h4>Today's Featured shoe</h4>
+	<%= image_tag @shoe.image_url.to_s, width:250 %>
+	<p><%= @shoe[:name] %></p>
+	<p><%= @shoe[:description] %></p>
+	</div> 
+</div>

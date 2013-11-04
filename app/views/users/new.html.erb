@@ -1,0 +1,15 @@
+<div class="container">
+<h2>Register to <%= image_tag("logo.png") %></h2>
+<div class="login_registration">
+	<div class = "form_fields">
+		<%= simple_form_for @user do |f|%>
+			<%= f.input :first_name, label: "First name" %>
+			<%= f.input :last_name, label: "Last name" %>
+			<%= f.input :email, label: "Email" %>
+			<%= f.input :password, label: "Password" %>
+			<%= f.input :password_confirmation, label: "Confirm Password" %>
+			<%= f.button :submit, value:' ', id: 'test' %>
+		<% end %>
+	</div>
+</div>
+</div>

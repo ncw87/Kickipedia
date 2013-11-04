@@ -1,0 +1,9 @@
+<div class="container">
+
+<h2><%= @shoe[:name] %></h2>    
+<%= link_to (@shoe[:brand] + ' Archive'), brand_all_path %></br>
+<h3><%= @shoe[:brand] %></h3>
+<%= image_tag @shoe.image_url.to_s, width: 400 %>
+<p>Released: <%= @shoe[:release_date] %></p>
+<p><%= @shoe[:description] %></p>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+
+<p id="shoe_title"><%= @shoe[:name] %></p>
+<% if signed_in? %>
+	<% if !@users.include? current_user %>
+	<%= button_to "Add to Collection", collections_path(shoe_id: @shoe), method: :post, class: "collection_button" %>
+	<% else %>
+	<%= button_to "Remove from Collection", collection_path(shoe_id: @shoe), method: :delete, class: "collection_button", confirm: "Are you sure?" %>
+	<% end %>
+<% end %>
+
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %></br>
+
+
+
+<%= image_tag @shoe.image_url.to_s, width: 400 %>
+<p>Released: <%= @shoe[:release_date] %></p>
+<p><%= @shoe[:description] %></p>
+
+
+</div>

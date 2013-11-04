@@ -1,0 +1,7 @@
+<div class="container">
+<h2>Sole Search</h2>
+<% @shoes.each do |shoe| %>
+<%= link_to (image_tag shoe.image_url.to_s, width:180), shoe_path(shoe.id) %>
+<% end %>
+
+</div>
